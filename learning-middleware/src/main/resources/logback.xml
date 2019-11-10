@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds" debug="true">
+
+    <property name="log.base" value="./logs" />
+    <property name="logPattern" value="%d - %m%n"></property>
+
+    <appender name="stdoutAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${logPattern}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="asyncStdoutAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>1024</queueSize>
+        <appender-ref ref="stdoutAppender" />
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <logger level="INFO" name="logger" additivity="false">
+        <appender-ref ref="asyncStdoutAppender" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="asyncStdoutAppender" />
+    </root>
+</configuration>
