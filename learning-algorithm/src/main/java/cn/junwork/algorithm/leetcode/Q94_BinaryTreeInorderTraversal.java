@@ -25,7 +25,7 @@ import java.util.Stack;
  * @author coderjunjun@gmail.com
  * @date 2019-08-25
  */
-public class Q94_Binary_Tree_Inorder_Traversal {
+public class Q94_BinaryTreeInorderTraversal {
 
 
     public class TreeNode {

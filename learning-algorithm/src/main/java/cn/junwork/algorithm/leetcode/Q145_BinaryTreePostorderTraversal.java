@@ -25,7 +25,7 @@ import java.util.Stack;
  * @author coderjunjun@gmail.com
  * @date 2019-08-25
  */
-public class Q145_Binary_Tree_Postorder_Traversal {
+public class Q145_BinaryTreePostorderTraversal {
 
     static class TreeNode {
         int val;
@@ -68,6 +68,6 @@ public class Q145_Binary_Tree_Postorder_Traversal {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-        new Q145_Binary_Tree_Postorder_Traversal().postorderTraversal(root);
+        new Q145_BinaryTreePostorderTraversal().postorderTraversal(root);
     }
 }
