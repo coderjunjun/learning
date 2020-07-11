@@ -18,7 +18,7 @@ public class SelfBounding {
 
     class Sub1 extends Base<Sub1> {
         void func() {
-
+            Sub1 v = getV();
         }
     }
 
