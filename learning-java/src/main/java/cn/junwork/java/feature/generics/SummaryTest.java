@@ -78,8 +78,9 @@ public class SummaryTest {
 
         while (i.hasNext()) {
             T next = i.next();
-            if (next.compareTo(candidate) > 0)
+            if (next.compareTo(candidate) > 0) {
                 candidate = next;
+            }
         }
         return candidate;
     }
