@@ -1,4 +1,4 @@
-package cn.junwork.learning.jmw.controller;
+package cn.junwork.learning.jmw.redis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,11 +23,11 @@ public class RedisTestController {
     private Logger logger = LoggerFactory.getLogger("logger");
 
 
-    public RedisTestController() {
-        logger.info("创建Controller……");
-        jedis = new Jedis("server0");
-        jedis.set("key", "房间里的刷卡缴费来得快");
-    }
+    //public RedisTestController() {
+    //    logger.info("创建Controller……");
+    //    jedis = new Jedis("server0");
+    //    jedis.set("key", "房间里的刷卡缴费来得快");
+    //}
 
 
     @RequestMapping("/test")
