@@ -12,7 +12,7 @@ public class InsertionSort {
     protected static void sort(int[] arr, int dt) {
         //第一个元素自成为有序区，因此遍历从第二个元素开始
         //[i, n) 即当前的无序区
-        for (int i = 1; i < arr.length; ++i) {
+        for (int i = dt; i < arr.length; ++i) {
             int e = arr[i]; //暂存无序区第一个元素
             int j = i;
         
